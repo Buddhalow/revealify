@@ -8,8 +8,8 @@
           <?php
             while (have_posts()): the_post();
             ?>
-              <div style="display: flex; align-items: center; justify-content: center">
-                <img style="width: 100pt" src="<?php echo get_the_post_thumbnail_url($post->ID)?>">
+              <div style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID)?>'); display: flex; align-items: center; justify-content: center">
+            
               </div>
             <?php
             endwhile;

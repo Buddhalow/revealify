@@ -16,3 +16,5 @@ function get_the_post_video_url($post_id) {
 
 add_action( 'wp_enqueue_scripts', 'revealify_enqueue_style' );
 add_action( 'wp_enqueue_scripts', 'revealify_enqueue_script' );
+
+add_theme_support('post-thumbnails');

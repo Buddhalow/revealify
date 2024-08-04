@@ -14,8 +14,51 @@ Tags: presentation, reveal, reveal.js
 
 body {
   font-family: "Geologica", sans-serif;
-  font-size: 50pt;
+  font-size: 10pt;
 }
 .slide-background-content {
   background-attachment: fixed;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.gallery > .gallery-item {
+   aspect-ratio: 16/9;
+   background-size: contain;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   position: relative;
+}
+.gallery-item > .post-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, .8);
+  transform: translateY(100%);
+  transition: transform 0.2s linear;
+}
+.gallery-item:hover > .post-description {
+  transform: translateY(0);
+  
+}
+.post-right-tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #0077ff;
+  font-size: 1rem;
+  padding: 5pt;
+  color: white;
+  text-transform: uppercase;
 }
