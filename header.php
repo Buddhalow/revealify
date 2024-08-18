@@ -46,8 +46,7 @@
 </head>
 <?php
 global $site;
-$site = domainity_get_current_site();
-print_r($site);
+$site = domainity_get_current_site(); 
 ?>
 <body style="margin: 0; padding: 0">
 	<div class="frames">
@@ -86,13 +85,13 @@ print_r($site);
 					<div class="container">
 						<div class="flex-row">
 							<a href="#" onclick="toggleMenu()" class="ph ph-list sm"></a>
-
 							<a href="/">
 								<?php if (has_post_thumbnail($site->ID)) {?>
-								<img src="<?php echo get_post_thumbnail_url($site->ID)?>">
+								<img style="width: 100pt; filter: invert(1)" src="<?php echo get_the_post_thumbnail_url($site->ID)?>">
 								<?php } else { ?>
-								<?php echo get_the_title($site->ID) ?></a>
+								<?php echo get_the_title($site->ID) ?>
 								<?php } ?>
+							</a>
 							<?php
 							if (has_nav_menu(domainity_get_domain())) {
 								$common_args = [ 

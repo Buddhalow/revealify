@@ -208,6 +208,8 @@ aside.open {
   width: 100%;
   height: 100%;
   z-index: 100;
+  background: rgba(0, 0, 0, .58);
+  backdrop-filter: blur(10pt);
 }
 
 .aside-header {
@@ -259,7 +261,7 @@ aside.open {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 50pt;
+  height: 70pt;
   background: transparent;
   color-scheme: dark;
   overflow: hidden;
@@ -280,6 +282,10 @@ aside.open {
   top: 0;
   width: 100%;
   height: 100%;
+  color: white;
+  a {
+    color: white;
+  }
 
 }
 .navbar a {
