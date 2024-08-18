@@ -13,4 +13,5 @@
   &copy; 2016-2025 Alexander Forselius. All Rights Reserved.
 </footer>
 </div>  
+
 <?php wp_footer() ?>

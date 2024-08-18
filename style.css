@@ -252,3 +252,53 @@ aside.open {
 }
 
 */
+
+.navbar {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  background: transparent;
+  color-scheme: dark;
+}
+.navbar a {
+  color: CanvasText;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 20pt;
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10pt;
+  li {
+    list-style: none;
+  }
+}
+
+#wpadminbar {
+  bottom: 0;
+  top: unset;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10pt;
+}
+
+.sm {
+  @media screen and (min-width: 720pt) {
+    display: none;
+  }
+}
+.lg {
+  @media screen and (max-width: 720pt) {
+    display: none;
+  }
+}

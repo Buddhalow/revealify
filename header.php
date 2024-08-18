@@ -53,17 +53,14 @@
 				<a href="#" onclick="toggleMenu()" class="ph ph-x"></a>
 			</div>
 			<nav>
-				<ul class="menu">
-					<li>
-						<a href="/">Start</a>
-					</li>
-					<?php /* $menuItems = wp_get_nav_menu_items('Main menu');
-					foreach($menuItems as $menuItem):?>
-					<li>
-						<a href="<?php echo $menuItem->url?>"><?php echo $menuItem->title?></a>
-					</li>
-					<?php endforeach; */ ?>
-				</ul>
+				<?php 
+				$common_args = [ 
+						'container_class' => '',
+						'theme_location' => domainity_get_domain(),
+						'menu_class'      => 'menu',
+					];
+					wp_nav_menu( $common_args );
+				?>
 			</nav>
 			<div style="flex: 1"></div>
 			<div style="padding: 20pt">
@@ -76,7 +73,23 @@
         VAT: SE910316XXXX01
 			</div>
 		</aside>
-		<div style="position: relative; overflow: scroll; flex: 1">
-			<div class="topleft-menu">
-			<a href="#" onclick="toggleMenu()" class="ph ph-list"></a>
-		</div>
+		<div style="position: relative; overflow: scroll; flex: 1" class="bootstrap-wrapper">
+	 
+			<div class="navbar"> 
+				<div class="container">
+					<div class="flex-row">
+						<a href="#" onclick="toggleMenu()" class="ph ph-list sm"></a>
+						<a href="/"><?php echo get_bloginfo('title')?></a>
+						<?php
+						$common_args = [ 
+							'container_class' => '',
+							'theme_location' => domainity_get_domain(),
+							'menu_class'      => 'navbar-nav lg',
+					];
+					wp_nav_menu( $common_args );
+					?>
+						</ul>
+					</div>
+					<div style="flex: 1"></div>
+				</div>
+			</div>
