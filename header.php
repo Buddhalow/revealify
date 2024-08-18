@@ -44,7 +44,11 @@
 		}
 	</script>
 </head>
-
+<?php
+global $site;
+$site = domainity_get_current_site();
+print_r($site);
+?>
 <body style="margin: 0; padding: 0">
 	<div class="frames">
 		<aside style="color-scheme: dark; overflow-y: scroll; padding-top: 30pt; flex-direction: column">
@@ -75,21 +79,43 @@
 		</aside>
 		<div style="position: relative; overflow: scroll; flex: 1" class="bootstrap-wrapper">
 	 
-			<div class="navbar"> 
-				<div class="container">
-					<div class="flex-row">
-						<a href="#" onclick="toggleMenu()" class="ph ph-list sm"></a>
-						<a href="/"><?php echo get_bloginfo('title')?></a>
-						<?php
-						$common_args = [ 
-							'container_class' => '',
-							'theme_location' => domainity_get_domain(),
-							'menu_class'      => 'navbar-nav lg',
-					];
-					wp_nav_menu( $common_args );
-					?>
-						</ul>
+			<div class="navbar <?php if (!is_home()):?>navbar-black<?php endif;?>"> 
+				<div class="navbar-background">
+				</div>
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="flex-row">
+							<a href="#" onclick="toggleMenu()" class="ph ph-list sm"></a>
+
+							<a href="/">
+								<?php if (has_post_thumbnail($site->ID)) {?>
+								<img src="<?php echo get_post_thumbnail_url($site->ID)?>">
+								<?php } else { ?>
+								<?php echo get_the_title($site->ID) ?></a>
+								<?php } ?>
+							<?php
+							if (has_nav_menu(domainity_get_domain())) {
+								$common_args = [ 
+									'container_class' => '',
+									'theme_location' => domainity_get_domain(),
+									'menu_class'      => 'navbar-nav lg',
+								];
+								wp_nav_menu( $common_args );
+							}
+							?>
+							</ul>
+							<div style="flex: 1"></div>
+							<?php
+							if (has_nav_menu("cta." . domainity_get_domain())) {
+								$common_args = [ 
+									'container_class' => '',
+									'theme_location' => "cta." . domainity_get_domain(),
+									'menu_class'      => 'navbar-nav',
+								];
+								wp_nav_menu( $common_args );
+							}
+							?>
+						</div>
 					</div>
-					<div style="flex: 1"></div>
 				</div>
 			</div>

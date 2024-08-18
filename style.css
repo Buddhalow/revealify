@@ -259,14 +259,33 @@ aside.open {
   left: 0;
   top: 0;
   width: 100vw;
-  height: auto;
+  height: 50pt;
   background: transparent;
   color-scheme: dark;
+  overflow: hidden;
+}
+.navbar-background {
+  position: absolute;
+  border-radius: 20pt;
+  box-shadow: inset 0 0 30pt  rgba(0, 0, 0, .2);
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100pt;
+  transform: scaleX(130%);
+}
+.navbar-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
 }
 .navbar a {
   color: CanvasText;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 20pt;
 }
 .navbar-nav {
@@ -301,4 +320,8 @@ aside.open {
   @media screen and (max-width: 720pt) {
     display: none;
   }
+}
+
+.navbar-black {
+  background: rgba(10, 10, 10);
 }
