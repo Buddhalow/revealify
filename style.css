@@ -13,7 +13,7 @@ Tags: presentation, reveal, reveal.js
 :root {
   --button-border-color: #888;
   --color: #666;
-  --primary: #d0d;
+  --primary: #C7A95D;
   --background: Canvas;
   --color: CanvasText;
 }
@@ -134,7 +134,7 @@ aside {
   cursor: pointer;
   color: var(--button-color);
   padding: 1rem;
-  border-radius: 100%;
+  border-radius: 50pt;
 }
 
 .btn-bordered {
@@ -142,6 +142,10 @@ aside {
 }
 .btn-primary {
   --button-color: var(--primary);
+  color: black !important;
+}
+.btn-primary:focus {
+  outline: 2pt solid black;
 }
 .btn:hover, a:hover {
   transform: scale(1.05);
@@ -208,7 +212,7 @@ aside.open {
   width: 100%;
   height: 100%;
   z-index: 100;
-  background: rgba(0, 0, 0, .58);
+  background: rgba(0, 0, 0, 1);
   backdrop-filter: blur(10pt);
 }
 
@@ -330,4 +334,11 @@ aside.open {
 
 .navbar-black {
   background: rgba(10, 10, 10);
+}
+
+@media screen and (max-width: 720pt) {
+  .section-content {
+    padding: 30pt;
+    margin: 0;
+  }
 }

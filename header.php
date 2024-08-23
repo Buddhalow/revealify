@@ -87,7 +87,7 @@ $site = domainity_get_current_site();
 							<a href="#" onclick="toggleMenu()" class="ph ph-list sm"></a>
 							<a href="/">
 								<?php if (has_post_thumbnail($site->ID)) {?>
-								<img style="width: 100pt; filter: invert(1)" src="<?php echo get_the_post_thumbnail_url($site->ID)?>">
+								<img style="width: 100pt; hue-rotate(180deg)" src="<?php echo get_the_post_thumbnail_url($site->ID)?>">
 								<?php } else { ?>
 								<?php echo get_the_title($site->ID) ?>
 								<?php } ?>

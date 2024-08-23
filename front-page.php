@@ -2,7 +2,7 @@
 <div class="sections">
   <div class="slides">
     <?php
-    $query = new WP_Query(
+      $query = new WP_Query(
       array(
         'post_type' => 'section',
         'tax_query' => [
