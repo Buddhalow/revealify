@@ -2,7 +2,7 @@
 <div class="bootstrap-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-m-12">
+      <div class="col-md-12">
         <h3>Portfolio</h3>
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5pt">
           <?php

@@ -1,9 +1,10 @@
 <?php get_header() ?>
+<div style="height: 100pt"></div>
 <div class="bootstrap-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-m-12">
-        <h3>Some of my current and past clients</h3>
+      <div class="col-md-12">
+        <h1>Some of my current and past clients</h1>
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5pt">
           <?php
             while (have_posts()): the_post();
