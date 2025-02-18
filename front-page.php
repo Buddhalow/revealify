@@ -60,13 +60,13 @@
 </div>
 <script type="text/javascript">  
   var reveal = new Reveal({
-  // Activate the scroll view
-  view: 'scroll',
-  hash: false,
+    // Activate the scroll view
+    view: 'scroll',
+    hash: false,
 
-  // Force the scrollbar to remain visible
-  scrollProgress: true,
-})
+    // Force the scrollbar to remain visible
+    scrollProgress: true,
+  })
   reveal.initialize();
 </script>
 <?php get_footer() ?>
